@@ -33,7 +33,7 @@ func TestApiKeyValue(t *testing.T) {
 
 	apiKey, error := GetAPIKey(headers)
 	
-	if apiKey == "FakeKeyValue" {
+	if apiKey != "FakeKeyValue" {
 		t.Errorf("got %d, wanted %q", error, "FakeKeyValue")
 	}
 }
